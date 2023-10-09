@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+//********************************MAIN PROGRAME***************************/
+
+/*
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -15,3 +20,64 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+*/
+//-------------------------------------------------------------------------------------
+ 
+//****************PROP USE event() with Alert function components/CLASS components **************************
+
+  
+
+ const root = ReactDOM.createRoot(document.getElementById('root'));
+ root.render(
+   <React.StrictMode>
+     <App  color="red" size="24" clickEvent={()=>
+     {
+       console.log("Someone click this button")
+       alert("This is prop Ex. button")
+       
+     }}/>
+   </React.StrictMode>
+ );
+ 
+ reportWebVitals();
+  
+
+ //----------------------------------------------------------------------
+
+//******************************PROP SIMPLE COLOR USE***********************
+
+/*
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App color="red" size="24"/>
+  </React.StrictMode>
+);
+
+reportWebVitals();
+
+*/ 
+
+//----------------------------------------------------------------------------
+ //***********************PROP USE event() function ComPONENT/CLASS components **************************
+
+ /*
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App  color="red" size="24" clickEvent={()=>
+    {
+      console.log("click this button")
+
+    }}/>
+  </React.StrictMode>
+);
+
+reportWebVitals();
+
+*/ 
+//------------------------------------------------------------------
+ 
