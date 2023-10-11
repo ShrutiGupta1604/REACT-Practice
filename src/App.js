@@ -4,13 +4,9 @@ import React from 'react';
  
 
 //*************************************MAIN ND RETURN ()********************************************************** 
- 
 /*
-
 function App() {
   
-
-
   return (
       <div className="App">
         <header className="App-header">
@@ -35,10 +31,41 @@ function App() {
   */
 //------------------------------------------------------ 
 
+//********************************React Component Life Cycle*****************************
+
+
+
+
+//---------------------------------------------------------------------------------------
+//**********************************STATE USE************************************
+
+class App extends React.Component
+{
+  state = {counter:0}
+  incrementCounter = () => 
+  {
+    this.setState({counter:this.state.counter+1})
+  }
+render(){  
+return (
+<div>
+  <button onClick={this.incrementCounter}>Click me</button>
+  <br/>
+  Counter:{this.state.counter}
+</div>
+)
+}
+}
+export default App;
+
+//------------------------------------------------------------------
+
+
+//---------------------------------------------------------------------------------
 
 //************************PROP USE WITH CLASS COMPONENT***************************
  
- 
+ /*
 
 class App extends React.Component
 {
@@ -55,7 +82,7 @@ return <button onClick={this.props.clickEvent}>Click me</button>
 }
 export default App;
 
- 
+*/ 
 //-------------------------------------------------------------------------------------
 
 
