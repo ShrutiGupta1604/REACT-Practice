@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 //********************************MAIN PROGRAME***************************/
 
-/*
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,25 +21,22 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-*/
+
 //-------------------------------------------------------------------------------------
 //***************************State use ***************** 
+/*
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App clickEvent={()=>
-    {
-      console.log("Someone click this button")
-       
-    }}/>
+    <App  />
   </React.StrictMode>
 );
 
 reportWebVitals();
  
 
-
+*/
 
 //****************PROP USE event() with Alert function components/CLASS components **************************
 

@@ -1,4 +1,4 @@
-//import logo from './logo.svg';
+ //import logo from './logo.svg';
 import './App.css';
 import React from 'react';
  
@@ -33,11 +33,221 @@ function App() {
 
 //********************************React Component Life Cycle*****************************
 
+//********************************Unmounted (Component removed)*****************************
+
+ /*
+class AppInner extends React.Component
+{ 
+render()
+{
+return <div>Inner Component</div>
+}
+componentWillUnmount()
+{
+console.log("unmounted")
+}
+
+// // In App class
+class App extends React.Component
+  state = {counter:0, innerComponent:<AppInner/>}
+// To add in Return of render method -> {this.state.innerComponent}
+componentDidMount()
+{
+setTimeout(() =>
+{
+this.setState({innerComponent:<div>Unmounted</div>})
+}, 1000);
+}
+}
+export default AppInner;
 
 
+//---------------------------------------------------------------------
+
+
+//********************************Updating (components change)*****************************
+
+/*
+
+class App extends React.Component
+{
+  state = {counter:0}
+  constructor(props)
+  {
+    super(props)
+    console.log("I am inside Constructor")
+  }
+
+  static getDerivedStateFromProps()
+  {
+  console.log("Inside the getDerivedStateFromProps")
+  }
+
+shouldComponentUpdate()
+{
+console.log("Inside the shouldComponentUpdate")
+return true
+} 
+
+incrementCounter = () => 
+{
+  //updating state on function call
+  this.setState({counter:this.state.counter+1})
+}  
+
+render()
+  {
+console.log("Inside the render method")
+return ( <button onClick={this.incrementCounter}>Click me</button>
+)
+}
+getSnapshotBeforeUpdate(prevProps, prevState)
+{
+console.log("Inside the getSnapshotBeforeUpdate")
+return true
+}
+
+componentDidMount()
+{
+  console.log("I am inside componentDidMount")
+}
+ 
+}
+export default App;
+
+ */
+
+/* //-------------------------------------------------------
+
+class App extends React.Component
+{
+  state = {counter:0}
+  constructor(props)
+  {
+    super(props)
+    console.log("I am inside Constructor")
+  }
+
+  static getDerivedStateFromProps()
+  {
+    console.log("I am inside getDerivedStateFromProps")
+    return true
+  }
+
+  shouldComponentUpdate()
+  {
+    console.log("Inside shouldComponentUpdate")
+    return  false
+  }
+
+  incrementCounter = () => 
+  {
+    //updating state on function call
+    this.setState({counter:this.state.counter+1})
+    if(this.state.counter % 2 == 0)
+    {
+      this.setState( )
+    }
+    else
+    {
+      this.setState({innerComponent:<div>Unmounted</div>})
+    }
+    
+  }
+
+  // Overridden render function
+  render()
+  {
+    console.log("Inside the render method")
+    console.log(this.props)
+    return (
+        <div>
+          <button onClick={this.incrementCounter}>Click me</button>
+          <br/>
+          Counter:{this.state.counter}
+          <br/>
+          <div>{this.state.innerComponent}</div>
+        </div>
+    )
+  }
+
+  getSnapshotBeforeUpdate(prevProps, prevState)
+  {
+    console.log("Inside getSnapshotBeforeUpdate")
+    console.log("Previous Prop:")
+    console.log(prevProps)
+    console.log("Previous State:")
+    console.log(prevState)
+    console.log("--------------------")
+    console.log("Updated Prop:")
+    console.log(this.props)
+    console.log("Update State:")
+    console.log(this.state)
+    return true
+  }
+
+  componentDidMount()
+  {
+    console.log("I am inside componentDidMount")
+  }
+}
+export default App;
+
+*/
+
+//------------------------------------------------------ 
+
+
+//****************************Mounting (components creation)*********************
+ 
+/* 
+
+class App extends React.Component
+{
+  state = {counter:0}
+  constructor(props)
+  {
+    super(props)
+    console.log("I am inside Constructor")
+  }
+  static getDerivedStateFromProps()
+  {
+    console.log("I am inside getDerivedStateFromProps")
+  }
+
+  incrementCounter = () => 
+  {
+    this.setState({counter:this.state.counter+1})
+  }
+
+  // Overridden render function
+  render()
+  {
+    console.log("Inside the render method")
+    console.log(this.props) 
+    return (
+        <div>
+          <button onClick={this.incrementCounter}>Click me</button>
+          <br/>
+          Counter:{this.state.counter}
+        </div>
+    )
+  }
+
+  componentDidMount()
+  {
+    console.log("I am inside componentDidMount")
+  }
+}
+export default App;
+
+ */
 
 //---------------------------------------------------------------------------------------
+
 //**********************************STATE USE************************************
+
+ /*
 
 class App extends React.Component
 {
@@ -48,8 +258,8 @@ class App extends React.Component
   }
 render(){  
 return (
-<div>
-  <button onClick={this.incrementCounter}>Click me</button>
+<div> 
+   <button onClick={this.incrementCounter}>Click me</button>
   <br/>
   Counter:{this.state.counter}
 </div>
@@ -57,6 +267,8 @@ return (
 }
 }
 export default App;
+
+*/
 
 //------------------------------------------------------------------
 
@@ -82,7 +294,7 @@ return <button onClick={this.props.clickEvent}>Click me</button>
 }
 export default App;
 
-*/ 
+*/
 //-------------------------------------------------------------------------------------
 
 
@@ -619,7 +831,8 @@ export default App;
 
 //********************CLASS -Constructors****************
 
-/*
+ /*
+
 function App()
 {
 
@@ -678,7 +891,7 @@ return (
 
 export default App;
 
-*/
+ */
 
 //----------------------------------------------------------------------------
 
@@ -688,6 +901,7 @@ export default App;
 
 
 //********************Inheritance******************************* 
+ 
 /*
 
 function App()
@@ -761,6 +975,8 @@ return (
 
 export default App;
 
+*/
+
 //----------------------------------------------------------------
   
 
@@ -792,7 +1008,7 @@ function App() {
 function App()
 {  
 return <h1>Hello SSI Digital</h1>
-
+    
 }
 export default App;
 
@@ -839,8 +1055,4 @@ export default App;
 
 //---------------------------------------------------------------
 
-
-
-//***************************************************************/
- 
  
